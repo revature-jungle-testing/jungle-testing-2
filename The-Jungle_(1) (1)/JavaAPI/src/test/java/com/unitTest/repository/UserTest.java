@@ -28,16 +28,15 @@ public class UserTest {
 
     @Test
     public void createNewUser(){
-        long date = 742892400000L;
         User createNewUser = new User(
             1993, 
             "Herman", 
             "Fluitt", 
-            "newerjerk1@hotmail.com", 
-            "mypasscodeisusername", 
-            "username", 
+            "jerk@hotmail.com", 
+            "bestCoderNA", 
+            "apasscode", 
             "He's swole", 
-            date, 
+            java.sql.Date.valueOf("1993-01-05"), 
             ".PeeEnGee"
             );
 
@@ -47,12 +46,12 @@ public class UserTest {
 
     @Test
     public void requestLogin(){
-       
-            String username ="bestCoderNA";
-            String passcode ="apasscode";
-       
+        User loginRequest = new User(
+            "bestCoderNA", 
+            "apasscode"
+            );
 
-        User result = userDao.requestLogin(username, passcode);
+        User result = userDao.requestLogin(loginRequest);
         Assert.assertNotNull(result);
 
     }
