@@ -15,6 +15,7 @@ public class ChatMessage {
 
     }
 
+    // create message 
     public ChatMessage(int userId, int groupId, String chatContent) {
         this.setUserId(userId);
         this.setGroupId(groupId);
